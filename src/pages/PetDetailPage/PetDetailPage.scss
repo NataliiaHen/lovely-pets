@@ -1,0 +1,17 @@
+@import '../../styles/style_utils';
+
+.pet-page {
+  @include section-gap;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include on-laptop {
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/style_utils';
+
+.adopt-btn {
+  @include primary-button;
+  @extend %large-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}

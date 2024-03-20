@@ -1,0 +1,37 @@
+@import '../../styles/style_utils';
+
+.button-fav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border-radius: 10%;
+  transition: $transition;
+  z-index: 5;
+
+  & svg {
+    height: 32px;
+    width: 32px;
+  }
+
+  @include on-laptop {
+    &:hover {
+      & svg {
+        path {
+          fill: #ffc6bf;
+        }
+      }
+    }
+  }
+
+  &--selected {
+    & svg {
+      path {
+        fill: #ff4732;
+      }
+    }
+  }
+}

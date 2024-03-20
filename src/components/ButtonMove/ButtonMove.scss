@@ -1,0 +1,58 @@
+@import '../../styles/style_utils';
+
+.button-move {
+  @include circle-button(32px);
+
+  &--small {
+    @include style-svg-stroke($primary-1000);
+
+    background-color: $white;
+    border-color: $primary-600;
+
+    @include on-laptop {
+      @include square(48px);
+
+      &:hover {
+        @include style-svg-stroke($white);
+
+        background-color: $orange-button;
+        border-color: $orange-button;
+      }
+    }
+
+    &:disabled {
+      @include style-svg-stroke($primary-500);
+
+      border-color: $primary-500;
+      background-color: $white;
+    }
+  }
+
+  &--big {
+    @include square(48px);
+    @include style-svg-stroke($primary-1000);
+
+    background-color: $page-bg;
+    border-color: $primary-600;
+
+    @include on-laptop {
+      &:hover {
+        @include style-svg-stroke($blue-700);
+
+        border-color: $blue-700;
+      }
+    }
+
+    @include on-desktop {
+      @include square(64px);
+    }
+
+    &:disabled {
+      @include style-svg-button($primary-600, inherit, $primary-500);
+
+      &:hover {
+        @include style-svg-button($primary-600, inherit, $primary-500);
+      }
+    }
+  }
+}
