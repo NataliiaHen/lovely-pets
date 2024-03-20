@@ -1,0 +1,99 @@
+@import '../../styles/style_utils';
+
+.filters {
+  width: 100%;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 312px;
+  }
+
+  &__field {
+    background-color: inherit;
+  }
+
+  &__location-select {
+    height: 48px;
+  }
+
+  &__type {
+    @extend %large-text;
+
+    display: flex;
+    align-items: center;
+    color: $primary-1200;
+    margin-bottom: 1rem;
+    line-height: 32px;
+    gap: 12px;
+
+    &-icon {
+      display: block;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  &__button {
+    @include orange-button;
+
+    max-width: 80px;
+  }
+
+  /* RadioButton */
+  &__radio-button input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__radio-button > label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &__custom-radio {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    outline: $primary-600 solid 1.5px;
+  }
+
+  &__radio-button:hover > label {
+    color: $blue-400;
+  }
+
+  &__radio-button:hover > label .filters__custom-radio {
+    outline-color: $blue-400;
+  }
+
+  &__radio-button input[type='radio']:checked + label .filters__custom-radio {
+    border: 1.5px solid $white;
+    background-color: $blue-700;
+  }
+
+  &__radio-button input[type='radio']:checked + label {
+    color: $blue-700;
+  }
+}

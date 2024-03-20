@@ -1,0 +1,14 @@
+@import '../../styles/style_utils';
+
+.custom-dropdown {
+  @extend %main-text;
+
+  color: $primary-1000;
+  position: relative;
+  width: 100%;
+  height: 48px;
+
+  .custom-select-container {
+    height: 100%;
+  }
+}
