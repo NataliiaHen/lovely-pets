@@ -1,0 +1,97 @@
+@import '../../styles/style_utils';
+
+.services {
+  padding-block: 48px;
+  background-image: url('../../img/elipse-bg-mobile.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include on-tablet {
+    padding-block: 50px 80px;
+    background-image: url('../../img/elipse-bg.png');
+  }
+
+  @include on-laptop {
+    padding-block: 85px 98px;
+  }
+
+  @include on-desktop {
+    padding-block: 104px 131px;
+  }
+
+  &__content {
+    margin: 0 auto;
+  }
+
+  &__title {
+    max-width: 288px;
+    margin-bottom: 48px;
+    text-align: center;
+
+    @include on-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 24px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @include on-tablet {
+      grid-column: span 1;
+      gap: 20px;
+    }
+
+    @include on-laptop {
+      gap: 40px;
+    }
+  }
+
+  &__photo-container {
+    max-width: 140px;
+    max-height: 140px;
+    transform: scale(1);
+    transition: all 300ms;
+
+    @include scale;
+
+    @include on-laptop {
+      max-width: 180px;
+      max-height: 180px;
+    }
+
+    @include on-desktop {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__type {
+    @extend %secondary-text;
+
+    color: $primary-900;
+
+    @include on-laptop {
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+}

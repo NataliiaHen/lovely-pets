@@ -1,0 +1,72 @@
+@import '../../styles/style_utils';
+
+.baner {
+  width: 100%;
+  padding-block: 52px 16px;
+
+  @include on-tablet {
+    padding-block: 55px;
+  }
+
+  @include on-laptop {
+    padding-block: 100px 135px;
+    background-image: url('../../img/baner-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include on-desktop {
+    padding-block: 135px;
+  }
+
+  &__content {
+    @include on-tablet {
+      @include page-grid;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    @include half-screen;
+
+    &--img {
+      margin-bottom: 2.5rem;
+
+      @include on-tablet {
+        margin-bottom: 0;
+        order: 2;
+      }
+    }
+  }
+
+  &__photo-box {
+    width: 100%;
+    max-width: 578px;
+    background-color: #ffc996;
+    border-radius: 50%;
+
+    @include on-laptop {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all 1s;
+    }
+  }
+
+  &__photo {
+    border-radius: 0 0 50% 50%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  &__info {
+    @include on-laptop {
+      opacity: 0;
+      transition: all 1s;
+    }
+  }
+}

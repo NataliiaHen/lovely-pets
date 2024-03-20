@@ -1,0 +1,75 @@
+@import '../../styles/style_utils';
+
+.give-pet {
+  @include on-tablet {
+    background-image: url('../../img/elipse-bg.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include on-desktop {
+    margin-top: 60px;
+  }
+
+  &__content {
+    padding-top: 64px;
+    border-top: 1px solid transparent;
+    margin: 0 auto;
+
+    @include on-tablet {
+      @include page-grid;
+    }
+  }
+
+  &__photo-container {
+    @include half-screen;
+
+    position: relative;
+    margin-bottom: 40px;
+
+    @include on-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include half-screen;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+
+    @include on-laptop {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__decor-circle {
+    position: absolute;
+    right: 10%;
+    top: -20%;
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+    border-radius: 50%;
+    background-color: #ffc996;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__link {
+    @include primary-button;
+
+    @include on-desktop {
+      width: 50%;
+    }
+  }
+}

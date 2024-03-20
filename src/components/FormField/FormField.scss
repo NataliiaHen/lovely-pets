@@ -1,0 +1,43 @@
+@import '../../styles/style_utils';
+
+.form-field {
+  @extend %main-text;
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  @include on-laptop {
+    font-size: 1.25rem;
+
+    &:hover {
+      .form-field__input {
+        border-color: $blue-500;
+        outline: none;
+      }
+    }
+  }
+
+  &__input {
+    @include form-input;
+  }
+
+  &__label {
+    @extend %main-text;
+
+    padding-left: 1rem;
+    font-weight: 500;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+    color: $primary-1200;
+
+    @include on-laptop {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__error {
+    @include error-message;
+  }
+}

@@ -1,0 +1,16 @@
+@import './vars';
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+}
+
+.wf-loading {
+  visibility: hidden;
+} /* font is loading and hidden */
+.wf-active,
+.wf-inactive {
+  visibility: visible;
+} /* font has loaded and is visible */

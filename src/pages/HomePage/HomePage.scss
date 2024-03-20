@@ -1,0 +1,5 @@
+@import '../../styles/style_utils';
+
+.home-page {
+  @include section-gap;
+}

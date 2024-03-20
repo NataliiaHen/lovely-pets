@@ -1,0 +1,21 @@
+@import './styles/style_utils';
+
+body {
+  .page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $page-bg;
+
+    &__content {
+      padding-block: 50px 80px;
+      flex-grow: 3;
+      height: 100%;
+
+      @include on-laptop {
+        padding-block-end: 184px;
+      }
+    }
+  }
+}

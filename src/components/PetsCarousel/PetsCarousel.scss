@@ -1,0 +1,47 @@
+@import '../../styles/style_utils';
+
+.pets-carousel {
+  &__top {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include on-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include on-laptop {
+      margin-bottom: 2rem;
+    }
+
+    @include on-desktop {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__count {
+    margin-top: 0.5rem;
+
+    @include on-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__view-all {
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    text-decoration: underline;
+    color: $blue-700;
+    cursor: pointer;
+  }
+}
