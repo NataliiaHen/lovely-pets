@@ -1,0 +1,58 @@
+@import '../../styles/style_utils';
+
+.catalog {
+  &__content {
+    width: 100%;
+
+    @include on-laptop {
+      @include page-grid;
+    }
+  }
+
+  &__top-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include on-laptop {
+      margin-bottom: 45px;
+      grid-column: 1/-1;
+    }
+  }
+
+  &__available-title {
+    @extend %main-text;
+  }
+
+  &__filters {
+    @include on-laptop {
+      grid-column: span 2;
+    }
+  }
+
+  &__pets {
+    @include on-laptop {
+      grid-column: 3/-1;
+    }
+  }
+
+  &__open-filters-btn {
+    @include primary-button;
+  }
+
+  &__error-message {
+    text-align: center;
+  }
+
+  &__reset-filters {
+    @include primary-button;
+
+    width: 180px;
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../styles/style_utils';
+
+.navbar {
+  @include on-laptop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 1.5rem;
+    padding-block: 1.5rem 0.5rem;
+    border-top: 1px solid $header-border-color;
+  }
+
+  &__adopt-link {
+    @include primary-button;
+
+    @include on-laptop {
+      max-width: 170px;
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__filters-btn {
+    @include primary-button;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    & svg {
+      path {
+        align-self: center;
+        stroke: $white;
+      }
+    }
+  }
+
+  &__open-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
+    background-color: $white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

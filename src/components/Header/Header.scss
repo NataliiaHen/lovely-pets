@@ -1,0 +1,11 @@
+@import '../../styles/style_utils';
+
+.header {
+  padding-block: 1.5rem 0.25rem;
+  width: 100%;
+
+  @include on-laptop {
+    padding-block: 1rem;
+    border-bottom: 1px solid #d1d1d2;
+  }
+}

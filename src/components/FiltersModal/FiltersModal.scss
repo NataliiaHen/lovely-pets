@@ -1,0 +1,85 @@
+@import '../../styles/style_utils';
+
+.filters-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: max-content;
+  width: 100%;
+  background-color: $modal-bg;
+  overflow-y: scroll;
+
+  &__content {
+    @include content-padding-inline;
+
+    position: fixed;
+    top: 0;
+    padding-block: 1.5rem;
+    width: 80%;
+    min-height: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding-block: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    @extend %large-text;
+
+    font-weight: 500;
+    color: $blue-700;
+  }
+
+  &__icon-link {
+    @include square(24px);
+  }
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    transition: opacity 300ms;
+    opacity: 1;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    transition: opacity 300ms;
+    opacity: 0;
+  }
+
+  .modal-fade {
+    &-enter {
+      transform: translateX(-100%);
+    }
+
+    &-enter-active {
+      transform: translateX(0);
+      transition: transform 300ms;
+    }
+
+    &-exit {
+      transform: translateX(0);
+    }
+
+    &-exit-active {
+      transform: translateX(-100%);
+      transition: transform 300ms;
+    }
+  }
+}

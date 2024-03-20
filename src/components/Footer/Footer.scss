@@ -1,0 +1,149 @@
+@import '../../styles/style_utils';
+
+.footer {
+  &__content {
+    @extend %secondary-text;
+    @include page-grid;
+
+    width: 100%;
+    row-gap: 24px;
+    padding-block: 2rem;
+    color: $primary-1300;
+    border-bottom: 1px solid $primary-600;
+  }
+
+  @include on-tablet {
+    row-gap: 24px;
+  }
+
+  @include on-laptop {
+    border-top: 1px solid $primary-600;
+  }
+
+  &__item {
+    display: flex;
+
+    @include on-tablet {
+      justify-content: center;
+    }
+
+    @include on-laptop {
+      justify-content: start;
+    }
+
+    &--logo {
+      grid-column: 1/-1;
+
+      @include on-laptop {
+        grid-column: 1/3;
+      }
+    }
+
+    &--nav {
+      grid-column: 1/-1;
+
+      @include on-laptop {
+        grid-column: 3/5;
+      }
+
+      @include on-desktop {
+        grid-column: 4/6;
+      }
+    }
+
+    &--contacts {
+      grid-column: 1/-1;
+
+      @include on-laptop {
+        grid-column: 5/-1;
+      }
+
+      @include on-desktop {
+        grid-column: 6/-1;
+      }
+    }
+
+    &--rights {
+      @extend %small-text;
+
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1.5rem;
+      grid-column: 1/-1;
+
+      @include on-laptop {
+        border-top: 1px solid $primary-600;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $primary-600;
+
+      @include on-laptop {
+        padding-bottom: none;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @include on-tablet {
+      width: 288px;
+    }
+  }
+
+  &__item-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet {
+      width: 288px;
+    }
+
+    @include on-laptop {
+      width: 100%;
+    }
+
+    &--contacts {
+      gap: 16px;
+    }
+  }
+
+  &__contact-info {
+    @include on-laptop {
+      &:hover {
+        cursor: pointer;
+
+        a {
+          color: $blue-500;
+        }
+      }
+    }
+  }
+
+  &__contact-title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__contact-link {
+    @extend %small-text;
+
+    display: inline-block;
+    color: $primary-900;
+    padding-left: 0.5rem;
+  }
+
+  &__team-name {
+    color: $blue-700;
+  }
+
+  &__rights-text {
+    color: $primary-1000;
+  }
+}
