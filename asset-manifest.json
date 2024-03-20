@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a9d21936.css",
+    "main.js": "./static/js/main.b6da7d88.js",
+    "static/media/paws2.png": "./static/media/paws2.bec3580c37c5c57c0c08.png",
+    "static/media/question-bg.png": "./static/media/question-bg.6c00452a09c743cdd4a5.png",
+    "static/media/baner-bg.png": "./static/media/baner-bg.a12f8c3b2be6a7558f47.png",
+    "static/media/elipse-bg-mobile.png": "./static/media/elipse-bg-mobile.b4c7734a4a63a1b9cfba.png",
+    "static/media/elipse-bg.png": "./static/media/elipse-bg.ed049ea79bd81cb63756.png",
+    "index.html": "./index.html",
+    "main.a9d21936.css.map": "./static/css/main.a9d21936.css.map",
+    "main.b6da7d88.js.map": "./static/js/main.b6da7d88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9d21936.css",
+    "static/js/main.b6da7d88.js"
+  ]
+}
